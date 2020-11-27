@@ -52,11 +52,14 @@
             return result;
         }
 
-        /* 3 задача */
+        /* 3 задача 
+        
+        to - на случай если simbol будет состоять из 1 или 2 и более символов
+        */
         function isCharPresent (string, simbol) {
             let result;
-            for (let i = 0; i < string.length; i++) {
-                if (string[i] === simbol) {
+            for (let i = 0, to = simbol.length; i < string.length; i++) {
+                if (string.slice(i, to+i) === simbol) {
                     result = true;
                     break;
                 } result = false;
@@ -65,11 +68,13 @@
             return result;
         }
 
-        /* 4 задача */
+        /* 4 задача 
+        
+        to - на случай если simbol будет состоять из 1 или 2 и более символов*/
         function charIndexOf (string, simbol) {
             let result;
-            for (let i = 0; i < string.length; i++) {
-                if (string[i] === simbol) {
+            for (let i = 0, to = simbol.length; i < string.length; i++) {
+                if (string.slice(i, to+i) === simbol) {
                     result = i;
                     break;
                 } result = -1;
