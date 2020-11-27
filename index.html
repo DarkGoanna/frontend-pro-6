@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw-6</title>
+</head>
+<body>
+    <script>
+        /*
+        Обьем = V = π(r*r)h
+        Площадь боковой поверхности цилиндра: S = 2πrh
+        Полная площадь поверхности цилиндра: S = 2πr(h+r)
+        */
+        let cylinder = {
+            radius : 2,
+            height : 3,
+            getVolume : function () {
+                return Math.PI * this.radius**2 * this.height;
+            },
+            getLateralSurfaceArea : function () {
+                return 2 * Math.PI * this.radius * this.height;
+            },
+            getTotalSurfaceArea : function () {
+                return 2 * Math.PI * this.radius * (this.height + this.radius);
+            }
+        }
+
+        /* 2 задача */
+        function getResult(a, b, simbol) {
+            let result;
+            switch (simbol) {
+                case '+' : 
+                    result = a + b;
+                    break;
+                case '-':
+                    result = a - b;
+                    break;
+                case '*':
+                    result = a * b;
+                    break;
+                case '/':
+                    result = a / b;
+                    break;
+                case '%':
+                    result = a % b;
+                    break;
+                case '**':
+                    result = a ** b;
+                    break;
+            }
+            return result;
+        }
+
+        /* 3 задача */
+        function isCharPresent (string, simbol) {
+            let result;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === simbol) {
+                    result = true;
+                    break;
+                } result = false;
+
+            }
+            return result;
+        }
+
+        /* 4 задача */
+        function charIndexOf (string, simbol) {
+            let result;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === simbol) {
+                    result = i;
+                    break;
+                } result = -1;
+
+            }
+            return result;
+        }
+    </script>
+</body>
+</html>
